@@ -1,0 +1,15 @@
+[project]
+name = "raspy"
+version = "0.1.0"
+description = "A reimplementation for RASP completely in Python as an embedded DSL"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+draw = ["chalk-diagrams"]
+
+[dependency-groups]
+dev = ["pytest>=8.4.2"]
+
+[tool.uv.sources]
+chalk-diagrams = { git = "https://github.com/chalk-diagrams/chalk/" }

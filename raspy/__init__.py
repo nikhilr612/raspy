@@ -10,4 +10,10 @@ from .rasp import (  # noqa: F401,F403
     tokens,
     where,
 )
-from .visualize import *
+
+try:
+    from .visualize import *
+except ImportError:
+    print(
+        "warning: Visualizations are not available. Install `chalk-diagrams` for visualization features."
+    )

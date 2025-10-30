@@ -49,7 +49,6 @@ def draw_sel(self):
 
 
 def draw(bself):
-
     self = bself.sel
     d = draw_sel(self)
 
@@ -152,6 +151,7 @@ def qdraw(self):
         | vcat([word(w, green) for w in self.sop(EXAMPLE).val])
     )
 
+
 def kdraw(self):
     return draw_svg(
         word("key", blue).with_envelope(rectangle(4, 1))
@@ -159,9 +159,8 @@ def kdraw(self):
         | hcat([word(w, orange) for w in self.sop(EXAMPLE).val])
     )
 
+
 Key._repr_svg_ = kdraw
-
-
 
 
 Query._repr_svg_ = qdraw
